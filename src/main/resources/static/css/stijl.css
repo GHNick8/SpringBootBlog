@@ -1,0 +1,338 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0277bd !important;
+    padding: 12px 20px;
+}
+.navbar .nav-link {
+    color: #e1f5fe !important;
+    font-size: 16px;
+    margin: 0 5px;
+    font-family: 'Orbitron', sans-serif;
+}
+.navbar .nav-link:hover {
+    color: #e0e0e0 !important;
+}
+.navbar .btn-outline-light {
+    border: 1px solid white;
+    padding: 5px 12px;
+    font-size: 14px;
+}
+.navbar .btn-primary {
+    background-color: #4fc3f7;
+    border: none;
+    padding: 5px 12px;
+    font-size: 14px;
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Custom Font */ 
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+/* 404 Page */
+.error-container {
+    text-align: center;
+    padding: 100px 20px;
+}
+.error-container h1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #4fc3f7;
+}
+.error-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.error-container .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+/* Admin Panel */
+.admin-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #e1f5fe;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.admin-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.admin-panel {
+    display: flex;
+    gap: 20px;
+}
+.admin-sidebar {
+    background: #039be5;
+    color: white;
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+}
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.admin-sidebar ul li {
+    margin-bottom: 10px;
+}
+.admin-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+.admin-sidebar ul li a:hover {
+    background: #81d4fa;
+}
+.admin-content {
+    flex-grow: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #0277bd;
+    color: #e1f5fe;
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+footer a {
+    color: #e1f5fe;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    margin-top: 30px;
+}
+
+/* Form Containers */
+.form-container, 
+.login-container, 
+.register-container, 
+.password-reset-container, 
+.profile-container {
+    font-family: 'Orbitron', sans-serif;
+    max-width: 500px;
+    margin: 40px auto;
+    background: #e1f5fe;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.login-container {
+    margin-bottom: 160px;
+}
+h4 {
+    text-align: center;
+    color: #333;
+}
+.form-label {
+    font-weight: bold;
+    color: #555;
+}
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+}
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Buttons */
+.btn-primary {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #4fc3f7;
+    border-color: #4fc3f7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+.btn-primary:hover {
+    background-color: #039be5;
+}
+.btn-secondary {
+    background-color: #81d4fa;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 50%;
+}
+.btn-secondary:hover {
+    background-color: #4fc3f7;
+}
+.forgot-password, .login-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4fc3f7;
+    font-size: 14px;
+}
+.forgot-password:hover, .login-link:hover {
+    text-decoration: underline;
+}
+
+/* Error Messages */
+.alert {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Profile Page */
+.profile-container img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+.profile-container form {
+    text-align: center;
+}
+.profile-container .form-control {
+    margin-bottom: 10px;
+}
+.btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.btn-box button {
+    background: #4fc3f7;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.btn-box button:hover {
+    background: #039be5;
+}
+
+/* Post Page */
+.post-container {
+    max-width: 800px;
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+.post-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4fc3f7;
+}
+.post-meta {
+    font-size: 14px;
+    color: #666;
+}
+.post-body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Pagination */
+.pagination {
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 20px;
+}
+.pagination .page-item {
+    margin: 0 5px;
+}
+.pagination .page-item a {
+    color: #4fc3f7;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #e1f5fe;
+    transition: 0.3s;
+}
+.pagination .page-item a:hover {
+    background: #4fc3f7;
+    color: #e1f5fe;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    font-family: 'Orbitron', sans-serif;
+    max-width: 200px;
+    margin-bottom: 90px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background: #4fc3f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.back-to-top:hover {
+    background: #039be5;
+}
+
+.text-dark {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Adding Custom style to more elements */
+.card-header, .d-flex, .container-admin, .add_post {
+    font-family: 'Orbitron', sans-serif;
+    margin: 12px;
+}
+
+/* Textarea post_edit class */
+.editor-group {
+    margin: 10px 0px 10px 0px;
+}
+
+.editor {
+    min-height: 200px; 
+    width: 100%; 
+    resize: vertical; 
+}
+
