@@ -336,3 +336,48 @@ textarea.form-control {
     resize: vertical; 
 }
 
+/* Default styling */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+/* Stack elements on smaller screens */
+/* Ensure all labels have the same width */
+.label-fixed {
+width: 80px; /* Adjust width as needed */
+text-align: right; /* Align text properly */
+}
+
+/* Make sure selects take the same space */
+.form-select {
+min-width: 150px; /* Ensures dropdowns are uniform */
+}
+
+/* Make sure button is aligned properly */
+@media (max-width: 576px) {
+    .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    }
+
+    .filter-bar > div {
+    width: 80%;
+    }
+
+    .filter-bar select,
+    .filter-bar button {
+    width: 80%;
+    max-width: 260px;
+    margin: 0 auto;
+    }
+
+    /* Ensure labels align on mobile */
+    .label-fixed {
+    text-align: left;
+    width: auto;
+    }
+}
