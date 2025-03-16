@@ -12,13 +12,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.techsphere.techsphere.models.Comment;
 import com.techsphere.techsphere.models.Post;
+import com.techsphere.techsphere.service.CommentService;
 import com.techsphere.techsphere.service.PostService;
 
 @Controller
 public class HomeController {
     @Autowired
     private PostService postService;
+
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping("/")
     public String home(Model model, @RequestParam(required = false, name = "sort_by", defaultValue = "createdAt") String sort_by,
@@ -44,6 +49,9 @@ public class HomeController {
                 links.add("<li class=\"page-item "+active+"\"><a href=\""+_temp_link+"\" class='page-link'>"+(link+1)+"</a></li>");
             }
             model.addAttribute("links", links);
+
+            List<Comment> comments = commentService.getLatestComments(); 
+            model.addAttribute("comments", comments); 
         }
         model.addAttribute("posts",posts_on_page);
         return "home_views/home";

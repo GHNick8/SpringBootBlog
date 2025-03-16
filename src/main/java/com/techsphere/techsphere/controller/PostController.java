@@ -1,6 +1,7 @@
 package com.techsphere.techsphere.controller;
 
 import java.security.Principal;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.techsphere.techsphere.models.Account;
+import com.techsphere.techsphere.models.Comment;
 import com.techsphere.techsphere.models.Post;
 import com.techsphere.techsphere.service.AccountService;
+import com.techsphere.techsphere.service.CommentService;
 import com.techsphere.techsphere.service.PostService;
 
 import jakarta.validation.Valid;
@@ -29,14 +32,19 @@ public class PostController {
     @Autowired
     private AccountService accountService;
 
+    @Autowired
+    private CommentService commentService;
+
 
     @GetMapping("/posts/{id}")
     public String getPost(@PathVariable Long id, Model model, Principal principal) {
         Optional<Post> optionalPost = postService.getById(id);
+        List<Comment> comments = commentService.getCommentsByHeading(id.toString());
         String authUser = "email";
         if (optionalPost.isPresent()) {
             Post post = optionalPost.get();
             model.addAttribute("post", post);
+            model.addAttribute("comments", comments);
 
             //get username of current logged in session user
             //String authUsername = SecurityContextHolder.getContext().getAuthentication().getName();

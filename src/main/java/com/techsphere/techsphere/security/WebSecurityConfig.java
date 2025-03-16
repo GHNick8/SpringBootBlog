@@ -43,6 +43,8 @@ public class WebSecurityConfig {
         .requestMatchers("/profile/**").authenticated()
         .requestMatchers("/update_photo/**").authenticated()
         .requestMatchers("/posts/add/**").authenticated()
+        .requestMatchers("/comments/delete/**").authenticated()
+        .requestMatchers("/", "/comments/add", "/{headingId}").permitAll()
         .requestMatchers("/admin/**").hasRole("ADMIN")
         .requestMatchers("/editor/**").hasAnyRole("ADMIN", "EDITOR")
         )

@@ -55,8 +55,8 @@ public class SeedData implements CommandLineRunner{
 
        account02.setEmail("admin@techsphere.com");
        account02.setPassword("pass987");
-       account02.setFirstname("Admin");
-       account02.setLastname("lastname");
+       account02.setFirstname("Tech Enthusiast");
+       account02.setLastname("Perl");
        account02.setRole(Roles.ADMIN.getRole());
        account02.setAge(25);
        account02.setDate_of_birth(LocalDate.parse("1990-01-01"));

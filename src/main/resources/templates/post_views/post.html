@@ -32,6 +32,28 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
                 Delete
               </button>
             </div>
+            <!-- Display Comments -->
+            <div class="comments-section">
+              <h5><strong style="color: black;">Comments</strong></h5>
+              <ul>
+                  <li th:each="comment : ${comments}">
+                      <strong th:text="${comment.account.firstname}"></strong>:
+                      <span th:text="${comment.content}"></span>
+                      <span sec:authorize="isAuthenticated()">
+                        <form th:action="@{/comments/delete/{id}(id=${comment.id})}" method="post" style="display: inline;">
+                            <input type="hidden" name="_method" value="delete"/>
+                            <button type="submit" class="btn btn-danger btn-sm ms-2" id="btn-del">Delete</button>
+                        </form>
+                      </span>
+                  </li>
+              </ul>
+            </div>       
+            <!-- Add Comment Form -->
+            <form th:action="@{/comments/add}" method="post" style="margin-top: 20px;">
+              <input type="hidden" name="headingId" th:value="${post.id}">
+              <textarea name="content" rows="3" class="form-control" placeholder="Add a comment..." required></textarea>
+              <button type="submit" class="btn btn-primary mt-2">Post Comment</button>
+            </form>          
           </div>
         </div>
       </section>
