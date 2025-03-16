@@ -99,6 +99,41 @@ public class SeedData implements CommandLineRunner{
                Perl remains a powerful and adaptable tool that continues to serve developers across various domains. 
                Originally created by Larry Wall in 1987, Perl was designed for text processing and system administration, 
                but it has since found its way into web development, automation, and even bioinformatics.
+
+               <br><br>
+               <a href="/images/perl.jpg">
+                  <img src="/images/perl.jpg" 
+                        alt="Perl Raptor Logo" 
+                        width="350" height="250">
+               </a>
+               <br>
+               
+               <h5><strong>Why Perl?</strong></h5>
+               <strong>Powerful Text Processing</strong><br>
+               Perl is known for its regular expressions and text manipulation capabilities, 
+               making it an excellent choice for data parsing, log processing, and automation scripts.<br><br>
+               <strong>Flexibility & Expressiveness</strong><br>
+               The Perl philosophy is "There's more than one way to do it." 
+               This flexibility allows programmers to write code in different styles, 
+               whether concise one-liners or structured object-oriented code.<br><br>
+               <strong>CPAN: A Rich Library of Modules</strong><br>
+               Perl boasts a massive ecosystem of reusable modules via CPAN (Comprehensive Perl Archive Network), 
+               providing pre-built solutions for almost any task.<br><br>
+               <strong>Cross-Platform Compatibility</strong><br>
+               Perl runs on Windows, Linux, MacOS, and even some legacy systems, 
+               making it an excellent choice for system administration and automation across different environments.<br><br>
+               <h5><strong>Hello, Perl! (Programming example)</strong></h5>
+               Want to try Perl? Here's a classic “Hello, World” example:<br><br>
+               #!/usr/bin/perl<br>
+               use strict;<br>
+               use warnings;<br>
+               print "Hello, World!\n";<br><br>
+               <h5><strong>Run it with:</strong></h5>
+               perl hello.pl<br><br>
+               <h5><strong>Learning Perl can be a rewarding experience</strong></h5>
+               Perl may not be as popular as it once was, but it still holds a place in automation, 
+               text processing, and legacy codebases. If you enjoy scripting and solving complex problems 
+               in creative ways, learning Perl can be a rewarding experience.<br><br>
             """);
             post01.setAccount(account01);
             postService.save(post01);
